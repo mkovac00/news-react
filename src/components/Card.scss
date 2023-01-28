@@ -29,6 +29,8 @@
         justify-content: center;
         align-items: flex-start;
         padding: 16px;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
 
         .card-category {
             color: $secondary-text-color;
