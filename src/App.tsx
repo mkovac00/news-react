@@ -1,10 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
-const App = () => {
+import CardList from "./components/CardList";
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <CardList />
     </div>
   );
 };
