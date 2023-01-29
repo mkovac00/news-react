@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./CardList.scss";
 
 import Card from "./Card";
+import axios from "axios";
 
 interface CardListProps {}
 
@@ -13,13 +14,11 @@ const CardList: React.FC<CardListProps> = ({}) => {
   useEffect(() => {
     const getArticles = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
-        const fetchedArticles = await response.json();
-        setArticles(fetchedArticles.results);
-        console.log(fetchedArticles.results);
+        setArticles(response.data.results);
       } catch (error) {
         console.log(error);
       }
