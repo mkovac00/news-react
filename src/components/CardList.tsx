@@ -15,9 +15,10 @@ const CardList: React.FC<CardListProps> = ({}) => {
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
+          `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
+        // console.log(response);
         setArticles(response.data.results);
       } catch (error) {
         console.log(error);
@@ -32,10 +33,10 @@ const CardList: React.FC<CardListProps> = ({}) => {
     <ul>
       {articles.slice(0, 10).map((article) => (
         <Card
-          key={article.short_url}
+          key={article.id}
           category={article.section}
           title={article.title}
-          image={article.multimedia[0].url}
+          image={article.media[0]["media-metadata"][1].url}
         />
       ))}
     </ul>

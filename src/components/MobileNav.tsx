@@ -5,12 +5,30 @@ import Category from "./Category";
 import Search from "./Search";
 
 const categories = [
-  "Home",
-  "Sport",
-  "World",
-  "Politics",
-  "Health",
-  "Celebrities",
+  {
+    name: "Home",
+    id: 0,
+  },
+  {
+    name: "Sport",
+    id: 1,
+  },
+  {
+    name: "World",
+    id: 2,
+  },
+  {
+    name: "Politics",
+    id: 3,
+  },
+  {
+    name: "Health",
+    id: 4,
+  },
+  {
+    name: "Celebrities",
+    id: 5,
+  },
 ];
 
 const toggleMobileMenu = () => {
@@ -39,7 +57,7 @@ const MobileNav = () => {
           <Search />
           <div className="category-list">
             {categories.map((category) => (
-              <Category name={category} />
+              <Category key={category.id} name={category.name} />
             ))}
           </div>
         </div>
