@@ -1,16 +1,55 @@
 @import "../variables.scss";
 
-.mobile-menu {
+.menu-btn {
+  padding: 16px 5vw 16px 5vw;
+  .menuicon-bar1, .menuicon-bar2, .menuicon-bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+.wrapper {
+  display: none;
+}
+
+.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  .menu-btn {
+    width: 100%;
+    padding-left: 87vw;
+    padding-top: 16px;
+  }
+  .mobilenav-content {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    height: 100vh;
-    width: 100vw;
-    background-color: $primary-background-color;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .mobilenav-title {
+      margin: 50px auto;
+      .mobilenav-title-red {
+        color: $important-text-color;
+      }
+    }
+    .category-list {
+      margin: 30px auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
 }

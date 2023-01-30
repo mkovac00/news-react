@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.scss";
 
 import Navigation from "./Navigation";
+import Search from "./Search";
 
 const Header = () => {
   const [isFeaturedActive, setIsFeaturedActive] = useState(true);
@@ -28,7 +29,7 @@ const Header = () => {
   return (
     <div className="header">
       <Navigation />
-      <input placeholder="Search news"></input>
+      <Search />
       <div className="news-option-container">
         <h3
           onClick={handleFeaturedActivation}

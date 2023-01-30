@@ -1,16 +1,6 @@
 @import "../variables.scss";
 
 .header {
-    input {
-        width: 90vw;
-        height: 50px;
-        border: none;
-        border-radius: 10px;
-        background-color: $secondary-background-color;
-        margin: 16px 5vw;
-        font-size: 16px;
-        padding: 16px;
-    }
     .news-option-container {
         display: flex;
         flex-direction: row;
@@ -21,8 +11,8 @@
             justify-content: center;
             align-items: center;
             margin: 32px 24px 16px 24px;
-            width: 100px;
-            height: 40px;
+            width: 110px;
+            height: 42px;
             border-radius: 20px;
         }
         .news-option-active {

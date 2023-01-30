@@ -27,9 +27,10 @@ const CardList: React.FC<CardListProps> = ({}) => {
     getArticles();
   }, []);
 
+  // Using slice below to limit the featured results to only ten articles
   return (
     <ul>
-      {articles.map((article) => (
+      {articles.slice(0, 10).map((article) => (
         <Card
           key={article.short_url}
           category={article.section}
