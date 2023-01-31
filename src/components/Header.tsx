@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./Header.scss";
 
 import Navigation from "./Navigation";
@@ -31,22 +32,29 @@ const Header = () => {
       <Navigation />
       <Search />
       <div className="news-option-container">
-        <h3
-          onClick={handleFeaturedActivation}
-          className={`news-option ${
-            isFeaturedActive ? "news-option-active" : ""
-          }`}
+        <Link
+          to="/featured"
+          style={{ textDecoration: "none", color: "#000000" }}
         >
-          Featured
-        </h3>
-        <h3
-          onClick={handleLatestActivation}
-          className={`news-option ${
-            isLatestActive ? "news-option-active" : ""
-          }`}
-        >
-          Latest
-        </h3>
+          <h3
+            onClick={handleFeaturedActivation}
+            className={`news-option ${
+              isFeaturedActive ? "news-option-active" : ""
+            }`}
+          >
+            Featured
+          </h3>
+        </Link>
+        <Link to="/latest" style={{ textDecoration: "none", color: "#000000" }}>
+          <h3
+            onClick={handleLatestActivation}
+            className={`news-option ${
+              isLatestActive ? "news-option-active" : ""
+            }`}
+          >
+            Latest
+          </h3>
+        </Link>
       </div>
     </div>
   );
