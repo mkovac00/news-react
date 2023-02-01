@@ -5,6 +5,7 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import Latest from "./Latest";
+import Loading from "./Loading";
 
 const LatestList = () => {
   const [articles, setArticles] = useState<any[]>([]);
@@ -30,7 +31,7 @@ const LatestList = () => {
   }, []);
 
   const fetchMoreData = () => {
-    setCurrentPage(currentPage + 1);
+    incremenetPage();
     if (articles.length >= totalResults / 10) {
       setHasMore(false);
       return;
@@ -50,6 +51,10 @@ const LatestList = () => {
     getArticles();
   };
 
+  const incremenetPage = () => {
+    setCurrentPage(currentPage + 1);
+  };
+
   return (
     <div className="latest-container">
       <div className="latest-container-upper">
@@ -61,7 +66,7 @@ const LatestList = () => {
         next={fetchMoreData}
         hasMore={hasMore}
         height={500}
-        loader={<p>Loading...</p>}
+        loader={<Loading />}
         endMessage={<p>You've reached the end.</p>}
       >
         {articles.map((article) => (
