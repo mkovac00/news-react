@@ -24,7 +24,6 @@ const FeaturedList = () => {
           `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
-        console.log(response);
         setArticles(response.data.results);
       } catch (error) {
         setErrorMessage(error as string);
