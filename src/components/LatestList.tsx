@@ -7,6 +7,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Latest from "./Latest";
 import Loading from "./Loading";
 
+const { v4: uuidv4 } = require("uuid");
+
 const LatestList = () => {
   const [articles, setArticles] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +73,7 @@ const LatestList = () => {
       >
         {articles.map((article) => (
           <Latest
-            key={article.url}
+            key={uuidv4()}
             time={article.publishedAt.slice(11, 16)}
             title={article.title}
           />

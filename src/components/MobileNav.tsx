@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./MobileNav.scss";
 
 import Category from "./Category";
@@ -54,7 +55,9 @@ const MobileNav = () => {
           <h1 className="mobilenav-title">
             <span className="mobilenav-title-red">My</span>News
           </h1>
-          <Search />
+          <Link to="/search">
+            <button className="search-button">Search</button>
+          </Link>
           <div className="category-list">
             {categories.map((category) => (
               <Category key={category.id} name={category.name} />
