@@ -1,52 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./CardList.scss";
 
-import axios from "axios";
-
 import Card from "./Card";
-import Loading from "./Loading";
+import placeholderImage from "../placeholder-image.jpg";
 
-interface CardListProps {}
+interface CardListProps {
+  articles: Array<any>;
+}
 
-const CardList: React.FC<CardListProps> = ({}) => {
-  const [articles, setArticles] = useState<any[]>([]);
-  const [category, setCategory] = useState("everything");
-  const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  useEffect(() => {
-    setIsLoading(true);
-    const getArticles = async () => {
-      try {
-        const response = await axios.get(
-          `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
-        );
-
-        setArticles(response.data.results);
-      } catch (error) {
-        setErrorMessage(error as string);
-      }
-    };
-
-    getArticles();
-    setIsLoading(false);
-  }, []);
-
+const CardList = (props: CardListProps) => {
   // Using slice below to limit the featured results to only ten articles
   return (
-    <>
-      {isLoading && <Loading />}
-      <ul>
-        {articles.slice(0, 10).map((article) => (
-          <Card
-            key={article.id}
-            category={article.section}
-            title={article.title}
-            image={article.media[0]["media-metadata"][1].url}
-          />
-        ))}
-      </ul>
-    </>
+    <ul>
+      {props.articles.slice(0, 10).map((article) => (
+        <Card
+          key={article.id}
+          category={article.section || article.section_name}
+          title={article.title || article.abstract}
+          // article.media[0]["media-metadata"][1].url
+          image={placeholderImage}
+        />
+      ))}
+    </ul>
   );
 };
 

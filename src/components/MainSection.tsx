@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import "./Header.scss";
+import "./MainSection.scss";
 
-import Navigation from "./Navigation";
+import Search from "./Search";
 
-const Header = () => {
+const MainSection = () => {
   const [isFeaturedActive, setIsFeaturedActive] = useState(true);
   const [isLatestActive, setIsLatestActive] = useState(false);
 
@@ -27,12 +27,8 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
-      <Navigation />
-      <Link to="/search">
-        <button className="search-button">Search</button>
-      </Link>
-
+    <>
+      <Search />
       <div className="news-option-container">
         <Link to="/" style={{ textDecoration: "none", color: "#000000" }}>
           <h3
@@ -55,8 +51,8 @@ const Header = () => {
           </h3>
         </Link>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Header;
+export default MainSection;
