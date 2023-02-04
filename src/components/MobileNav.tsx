@@ -55,9 +55,9 @@ const MobileNav = () => {
           <h1 className="mobilenav-title">
             <span className="mobilenav-title-red">My</span>News
           </h1>
-          <Link to="/search">
+          {/* <Link to="/search">
             <button className="search-button">Search</button>
-          </Link>
+          </Link> */}
           <div className="category-list">
             {categories.map((category) => (
               <Category key={category.id} name={category.name} />
