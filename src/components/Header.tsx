@@ -11,6 +11,8 @@ const Header = () => {
   const handleFeaturedActivation = () => {
     if (isFeaturedActive && !isLatestActive) {
       setIsFeaturedActive(true);
+    } else if (!isFeaturedActive && !isLatestActive) {
+      setIsFeaturedActive((current) => !current);
     } else {
       setIsFeaturedActive((current) => !current);
       setIsLatestActive((current) => !current);
@@ -20,16 +22,23 @@ const Header = () => {
   const handleLatestActivation = () => {
     if (isLatestActive && !isFeaturedActive) {
       setIsLatestActive(true);
+    } else if (!isLatestActive && !isFeaturedActive) {
+      setIsLatestActive((current) => !current);
     } else {
       setIsLatestActive((current) => !current);
       setIsFeaturedActive((current) => !current);
     }
   };
 
+  const handleSearchActivation = () => {
+    setIsLatestActive(false);
+    setIsFeaturedActive(false);
+  };
+
   return (
     <div className="header">
       <Navigation />
-      <Link to="/search">
+      <Link to="/search" onClick={handleSearchActivation}>
         <button className="search-button">Search</button>
       </Link>
 
