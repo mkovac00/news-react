@@ -1,39 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./MobileNav.scss";
 
 import Category from "./Category";
-import Search from "./Search";
 
 const categories = [
   {
-    name: "Home",
+    name: "science",
     id: 0,
   },
   {
-    name: "Sport",
+    name: "business",
     id: 1,
   },
   {
-    name: "World",
+    name: "entertainment",
     id: 2,
   },
   {
-    name: "Politics",
+    name: "health",
     id: 3,
   },
   {
-    name: "Health",
+    name: "sports",
     id: 4,
   },
   {
-    name: "Celebrities",
+    name: "technology",
     id: 5,
   },
 ];
 
 const toggleMobileMenu = () => {
   const mobileMenu = document.querySelector(".wrapper");
+
   mobileMenu?.classList.toggle("active");
 };
 
@@ -55,12 +54,14 @@ const MobileNav = () => {
           <h1 className="mobilenav-title">
             <span className="mobilenav-title-red">My</span>News
           </h1>
-          {/* <Link to="/search">
-            <button className="search-button">Search</button>
-          </Link> */}
           <div className="category-list">
             {categories.map((category) => (
-              <Category key={category.id} name={category.name} />
+              <Category
+                key={category.id}
+                name={
+                  category.name.charAt(0).toUpperCase() + category.name.slice(1)
+                }
+              />
             ))}
           </div>
         </div>

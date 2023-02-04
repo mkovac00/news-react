@@ -12,9 +12,7 @@ type FeaturedListProps = {
 
 const FeaturedList = () => {
   const [articles, setArticles] = useState<any[]>([]);
-  const [category, setCategory] = useState("everything");
   const [isLoading, setIsLoading] = useState(true);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -26,7 +24,7 @@ const FeaturedList = () => {
 
         setArticles(response.data.results);
       } catch (error) {
-        setErrorMessage(error as string);
+        console.log(error);
       }
     };
 
