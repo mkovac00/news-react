@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import "./App.scss";
 
 import Header from "./components/Header";
@@ -14,9 +19,10 @@ const App: React.FC = () => {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<FeaturedList />}></Route>
+          <Route path="/" element={<Navigate to="/category/home" />}></Route>
           <Route path="/latest" element={<LatestList />}></Route>
           <Route path="/search" element={<Search />}></Route>
+          <Route path="/category/home" element={<FeaturedList />}></Route>
           <Route
             path="/category/:categoryName"
             element={<CategoryList />}

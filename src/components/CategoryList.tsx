@@ -13,7 +13,6 @@ const CategoryList = () => {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    console.log(categoryName);
     setIsLoading(true);
     const getArticles = async () => {
       try {
@@ -22,7 +21,6 @@ const CategoryList = () => {
         );
 
         setArticles(response.data.articles);
-        console.log(articles);
       } catch (error) {
         console.log(error);
       }
@@ -35,7 +33,10 @@ const CategoryList = () => {
   return (
     <>
       <h2 className="categories-title">
-        <span className="categories-title-red">{categoryName}</span> news
+        <span className="categories-title-red">
+          {categoryName!.charAt(0).toUpperCase() + categoryName!.slice(1)}
+        </span>{" "}
+        news
       </h2>
       {isLoading && <Loading />}
       {!isLoading && <CardList articles={articles} />}
