@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+.favorites-title {
+    padding-left: 5vw;
+    padding-top: 5vh;
+    .favorites-title-red {
+        color: $important-text-color;
+    }
+}

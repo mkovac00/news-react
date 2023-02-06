@@ -33,6 +33,10 @@ const categories = [
     name: "technology",
     id: 6,
   },
+  {
+    name: "favorites",
+    id: 7,
+  },
 ];
 
 const toggleMobileMenu = () => {

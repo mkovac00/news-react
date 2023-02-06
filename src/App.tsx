@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import LatestList from "./components/LatestList";
 import FeaturedList from "./components/FeaturedList";
 import CategoryList from "./components/CategoryList";
+import FavoritesList from "./components/FavoritesList";
 import Search from "./components/Search";
 
 const App: React.FC = () => {
@@ -22,7 +23,12 @@ const App: React.FC = () => {
           <Route path="/" element={<Navigate to="/category/home" />}></Route>
           <Route path="/latest" element={<LatestList />}></Route>
           <Route path="/search" element={<Search />}></Route>
+          <Route
+            path="/favorites"
+            element={<Navigate to="/category/favorites" />}
+          ></Route>
           <Route path="/category/home" element={<FeaturedList />}></Route>
+          <Route path="/category/favorites" element={<FavoritesList />}></Route>
           <Route
             path="/category/:categoryName"
             element={<CategoryList />}
