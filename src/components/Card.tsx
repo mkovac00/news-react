@@ -26,7 +26,14 @@ const Card = (props: CardProps) => {
       favoriteArticles.push(article);
       setIsFavorite(true);
     } else {
-      favoriteArticles.pop();
+      favoriteArticles.forEach((article: any) => {
+        if (article.title === props.title) {
+          let articleIndex = favoriteArticles.indexOf(article);
+          if (articleIndex > -1) {
+            favoriteArticles.splice(articleIndex, 1);
+          }
+        }
+      });
       setIsFavorite(false);
     }
 

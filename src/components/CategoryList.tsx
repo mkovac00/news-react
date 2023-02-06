@@ -33,6 +33,7 @@ const CategoryList = () => {
   return (
     <>
       <h2 className="categories-title">
+        Featured{" "}
         <span className="categories-title-red">
           {categoryName!.charAt(0).toUpperCase() + categoryName!.slice(1)}
         </span>{" "}
