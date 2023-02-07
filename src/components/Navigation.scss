@@ -1,15 +1,15 @@
 @import "../variables.scss";
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .header-title {
-        padding: 16px 5vw 16px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-title {
+    padding: 16px 5vw 16px 5vw;
+  }
+  .header-title {
+    .header-title-red {
+      color: $important-text-color;
     }
-    .header-title {
-        .header-title-red {
-            color: $important-text-color;
-        }
-    }
+  }
 }

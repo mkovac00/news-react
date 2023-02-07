@@ -13,7 +13,7 @@ interface CardListProps {
 const CardList = (props: CardListProps) => {
   // Using slice below to limit the featured results to only ten articles
   return (
-    <ul>
+    <ul className="card-list">
       {props.articles.slice(0, 10).map((article) => (
         <Card
           key={uuidv4()}

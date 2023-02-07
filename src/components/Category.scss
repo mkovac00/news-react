@@ -1,11 +1,11 @@
 .category-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  .category-icon {
     background-color: inherit;
-    .category-icon {
-        background-color: inherit;
-        padding-bottom: 5px;
-    }
+    padding-bottom: 5px;
+  }
 }

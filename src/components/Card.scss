@@ -1,60 +1,70 @@
 @import "../variables.scss";
 
 .card {
-    width: 90vw;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 24px auto;
-    background-color: $secondary-background-color;
+  width: 90vw;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 24px auto;
+  background-color: $secondary-background-color;
 
-    .card-img, .card-info {
-        background-color: inherit;
-        .card-category, .card-title {
-            background-color: inherit;
-        }
-    }
+  @media only screen and (min-width: $breakpoint-tablet) {
+    width: 400px;
+  }
 
-    .card-img {
-        object-fit: cover;
-        height: 60%;
-        width: 100%;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
-    .card-info {
-        position: relative;
-        height: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 16px;
-        border-bottom-left-radius: inherit;
-        border-bottom-right-radius: inherit;
+  @media only screen and (min-width: $breakpoint-laptop) {
+    width: 400px;
+  }
 
-        .favorites {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            background-color: inherit;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        .card-category {
-            color: $secondary-text-color;
-            font-size: 14px;
-            text-transform: uppercase;
-            padding-bottom: 8px;
-        }
-        .card-title {
-            font-size: 18px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
+  .card-img,
+  .card-info {
+    background-color: inherit;
+    .card-category,
+    .card-title {
+      background-color: inherit;
     }
+  }
+
+  .card-img {
+    object-fit: cover;
+    height: 60%;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .card-info {
+    position: relative;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    .favorites {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background-color: inherit;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .card-category {
+      color: $secondary-text-color;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-bottom: 8px;
+    }
+    .card-title {
+      font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
 }

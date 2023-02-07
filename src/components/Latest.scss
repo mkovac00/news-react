@@ -1,31 +1,32 @@
 @import "../variables.scss";
 
 .latest-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 90vw;
-    height: 80px;
-    background-color: $secondary-background-color;
-    padding: 12px;
-    margin-bottom: 3px;
-    box-shadow: 0px 24px 6px -24px $primary-background-color;
-    .latest-card-time, .latest-card-title {
-        background-color: inherit;
-    }
-    .latest-card-time {
-        color: $secondary-text-color;
-        padding-bottom: 4px;
-        font-size: 13px;
-        font-weight: bold;
-    }
-    .latest-card-title {
-        font-size: 16px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90vw;
+  height: 80px;
+  background-color: $secondary-background-color;
+  padding: 12px;
+  margin-bottom: 3px;
+  box-shadow: 0px 24px 6px -24px $primary-background-color;
+  .latest-card-time,
+  .latest-card-title {
+    background-color: inherit;
+  }
+  .latest-card-time {
+    color: $secondary-text-color;
+    padding-bottom: 4px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .latest-card-title {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }

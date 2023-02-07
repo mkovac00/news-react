@@ -7,3 +7,25 @@
   font-family: 'Nunito', sans-serif;
   background-color: $primary-background-color;
 }
+
+.App {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}
+
+// @media only screen and (min-width: 1024px) {
+//   .App {
+//     display: grid; 
+//     grid-template-columns: 0.3fr 1.8fr 0.9fr; 
+//     grid-template-rows: 0.4fr 1.3fr 1.3fr; 
+//     gap: 0px 0px; 
+//     grid-template-areas: 
+//       "Header Header Header"
+//       "Nav News News"
+//       "Nav News News"; 
+//   }
+
+  
+// }
