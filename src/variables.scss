@@ -1,10 +1,14 @@
-$secondary-text-color: #1E71BB;
-$primary-background-color: #F2F2F2;
+$secondary-text-color: #1e71bb;
+$primary-background-color: #f2f2f2;
 $secondary-background-color: #ffffff;
-$important-text-color: #BB1E1E;
+$important-text-color: #bb1e1e;
 $important-background-color: rgba(187, 30, 30, 0.15);
 $dark-gray-color: #7e7e7e;
+$light-text-color: #ffffff;
+$dark-text-color: #292929;
 
 // ########### MEDIA QUERIES ########### //
-$breakpoint-tablet: 480px;
-$breakpoint-laptop: 769px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1680px;

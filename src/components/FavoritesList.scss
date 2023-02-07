@@ -3,6 +3,11 @@
 .favorites-title {
   padding-left: 5vw;
   padding-top: 5vh;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    padding-left: 24px;
+  }
+
   .favorites-title-red {
     color: $important-text-color;
   }

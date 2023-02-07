@@ -8,12 +8,19 @@
   margin: 24px auto;
   background-color: $secondary-background-color;
 
-  @media only screen and (min-width: $breakpoint-tablet) {
+  @media only screen and (min-width: $breakpoint-mobile) {
     width: 400px;
   }
 
-  @media only screen and (min-width: $breakpoint-laptop) {
-    width: 400px;
+  @media only screen and (min-width: $breakpoint-desktop) {
+    width: 360px;
+    height: 300px;
+    margin: 16px;
+  }
+
+  @media only screen and (min-width: $breakpoint-large) {
+    width: 420px;
+    height: 360px;
   }
 
   .card-img,

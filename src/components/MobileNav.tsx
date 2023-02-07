@@ -3,41 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./MobileNav.scss";
 
 import Category from "./Category";
-
-const categories = [
-  {
-    name: "home",
-    id: 0,
-  },
-  {
-    name: "entertainment",
-    id: 1,
-  },
-  {
-    name: "business",
-    id: 2,
-  },
-  {
-    name: "science",
-    id: 3,
-  },
-  {
-    name: "health",
-    id: 4,
-  },
-  {
-    name: "sports",
-    id: 5,
-  },
-  {
-    name: "technology",
-    id: 6,
-  },
-  {
-    name: "favorites",
-    id: 7,
-  },
-];
+import { categories } from "../categories";
 
 const toggleMobileMenu = () => {
   const mobileMenu = document.querySelector(".wrapper");

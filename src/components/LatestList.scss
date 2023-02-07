@@ -6,6 +6,12 @@
   background-color: $secondary-background-color;
   margin: auto 5vw;
   border-radius: 10px;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    width: 360px;
+    margin: 16px 0;
+  }
+
   .latest-container-upper {
     display: flex;
     justify-content: flex-start;

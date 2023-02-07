@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+.desktop-news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Featured Featured Latest"
+    "Featured Featured Latest";
+}
+.desktop-news-featured {
+  grid-area: Featured;
+}
+.desktop-news-latest {
+  grid-area: Latest;
+}
