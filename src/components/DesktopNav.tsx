@@ -18,6 +18,7 @@ const DesktopNav = () => {
         <NavLink
           to={`/category/${category.name}`}
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          key={category.id}
         >
           <Category
             key={category.id}
