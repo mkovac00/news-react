@@ -24,7 +24,7 @@ const DesktopNav = () => {
             name={
               category.name.charAt(0).toUpperCase() + category.name.slice(1)
             }
-            size={30}
+            size={35}
           />
         </NavLink>
       ))}
