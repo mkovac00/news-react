@@ -6,7 +6,7 @@ import LatestList from "./LatestList";
 
 const DesktopNews = () => {
   return (
-    <div className="desktop-news-grid">
+    <div className="desktop-news-page">
       <div className="desktop-news-featured">
         <FeaturedList />
       </div>

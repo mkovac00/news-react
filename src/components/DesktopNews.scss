@@ -1,17 +1,19 @@
 @import "../variables.scss";
 
-.desktop-news-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Featured Featured Latest"
-    "Featured Featured Latest";
-}
-.desktop-news-featured {
-  grid-area: Featured;
-}
-.desktop-news-latest {
-  grid-area: Latest;
+.desktop-news-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .desktop-news-featured {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      max-width: 420px;
+    }
+    @media only screen and (min-width: $breakpoint-medium) {
+      max-width: 820px;
+    }
+    @media only screen and (min-width: $breakpoint-large) {
+      max-width: 920px;
+    }
+  }
 }
