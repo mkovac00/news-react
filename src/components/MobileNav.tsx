@@ -50,6 +50,7 @@ const MobileNav = () => {
                     category.name.charAt(0).toUpperCase() +
                     category.name.slice(1)
                   }
+                  size={40}
                 />
               </NavLink>
             ))}

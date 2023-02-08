@@ -13,34 +13,45 @@ import { RiComputerLine } from "react-icons/ri"; // technology
 
 type CategoryProps = {
   name: string;
+  size: number;
 };
 
 const Category = (props: CategoryProps) => {
   let categoryIcon;
   switch (props.name) {
     case "Home":
-      categoryIcon = <AiFillHome size={40} className="category-icon" />;
+      categoryIcon = <AiFillHome size={props.size} className="category-icon" />;
       break;
     case "Entertainment":
-      categoryIcon = <GiDramaMasks size={40} className="category-icon" />;
+      categoryIcon = (
+        <GiDramaMasks size={props.size} className="category-icon" />
+      );
       break;
     case "Business":
-      categoryIcon = <BsBriefcaseFill size={40} className="category-icon" />;
+      categoryIcon = (
+        <BsBriefcaseFill size={props.size} className="category-icon" />
+      );
       break;
     case "Science":
-      categoryIcon = <MdScience size={40} className="category-icon" />;
+      categoryIcon = <MdScience size={props.size} className="category-icon" />;
       break;
     case "Health":
-      categoryIcon = <MdHealthAndSafety size={40} className="category-icon" />;
+      categoryIcon = (
+        <MdHealthAndSafety size={props.size} className="category-icon" />
+      );
       break;
     case "Sports":
-      categoryIcon = <MdSportsBasketball size={40} className="category-icon" />;
+      categoryIcon = (
+        <MdSportsBasketball size={props.size} className="category-icon" />
+      );
       break;
     case "Technology":
-      categoryIcon = <RiComputerLine size={40} className="category-icon" />;
+      categoryIcon = (
+        <RiComputerLine size={props.size} className="category-icon" />
+      );
       break;
     case "Favorites":
-      categoryIcon = <AiFillStar size={40} className="category-icon" />;
+      categoryIcon = <AiFillStar size={props.size} className="category-icon" />;
       break;
   }
 
