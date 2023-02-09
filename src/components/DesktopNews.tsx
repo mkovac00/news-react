@@ -1,4 +1,3 @@
-import React from "react";
 import "./DesktopNews.scss";
 
 import FeaturedList from "./FeaturedList";

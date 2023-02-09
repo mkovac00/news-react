@@ -1,4 +1,3 @@
-import React from "react";
 import "./DesktopFixed.scss";
 
 const DesktopFixed = () => {

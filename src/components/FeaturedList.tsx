@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./FeaturedList.scss";
 
 import axios from "axios";
 
 import CardList from "./CardList";
 import Loading from "./Loading";
-
-type FeaturedListProps = {
-  isActive: boolean;
-};
 
 const FeaturedList = () => {
   const [articles, setArticles] = useState<any[]>([]);

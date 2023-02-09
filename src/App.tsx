@@ -104,27 +104,6 @@ const App: React.FC = () => {
           </>
         )}
       </Media>
-
-      {/* <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Navigate to="/category/home" />}></Route>
-          <Route path="/latest" element={<LatestList />}></Route>
-          <Route path="/search" element={<Search />}></Route>
-          <Route
-            path="/favorites"
-            element={<Navigate to="/category/favorites" />}
-          ></Route>
-          <Route path="/category/home" element={<FeaturedList />}></Route>
-          <Route path="/category/favorites" element={<FavoritesList />}></Route>
-          <Route
-            path="/category/:categoryName"
-            element={<CategoryList />}
-          ></Route>
-        </Routes>
-      </div>
-    </Router> */}
     </>
   );
 };

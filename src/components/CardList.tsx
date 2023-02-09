@@ -1,4 +1,3 @@
-import React from "react";
 import "./CardList.scss";
 
 import Card from "./Card";
@@ -19,7 +18,7 @@ const getRandomPlaceholderImage = (randomIndex: number) => {
 };
 
 const CardList = (props: CardListProps) => {
-  // Using slice below to limit the featured results to only ten articles
+  // Using slice below to limit the featured results to only twelve articles
   return (
     <ul className="card-list">
       {props.articles.slice(0, 12).map((article) => (
@@ -34,8 +33,6 @@ const CardList = (props: CardListProps) => {
                   Math.floor(Math.random() * images.length)
                 )
           }
-          // article.media[0]["media-metadata"][1].url
-          // image={placeholderImage}
         />
       ))}
     </ul>

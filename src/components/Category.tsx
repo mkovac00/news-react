@@ -1,15 +1,14 @@
-import React from "react";
 import "./Category.scss";
 
-import { AiFillHome, AiFillStar } from "react-icons/ai"; // home, favorites
-import { GiDramaMasks } from "react-icons/gi"; // entertainment
-import { BsBriefcaseFill } from "react-icons/bs"; // business
+import { AiFillHome, AiFillStar } from "react-icons/ai";
+import { GiDramaMasks } from "react-icons/gi";
+import { BsBriefcaseFill } from "react-icons/bs";
 import {
   MdScience,
   MdHealthAndSafety,
   MdSportsBasketball,
-} from "react-icons/md"; // science, health, sports
-import { RiComputerLine } from "react-icons/ri"; // technology
+} from "react-icons/md";
+import { RiComputerLine } from "react-icons/ri";
 
 type CategoryProps = {
   name: string;

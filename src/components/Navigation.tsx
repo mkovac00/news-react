@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Navigation.scss";
 
 import MobileNav from "./MobileNav";

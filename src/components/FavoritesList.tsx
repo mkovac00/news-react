@@ -1,4 +1,3 @@
-import React from "react";
 import "./FavoritesList.scss";
 
 import CardList from "./CardList";
