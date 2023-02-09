@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Header.scss";
+import "./MobileHeader.scss";
 
-import Navigation from "./Navigation";
+import MobileNav from "./MobileNav";
 
-const Header = () => {
+const MobileHeader = () => {
   let activeStyle = {
     backgroundColor: "rgba(187, 30, 30, 0.15)",
     color: "#BB1E1E",
@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Navigation />
+      <MobileNav />
       <input
         className="search-button"
         placeholder="Search"
@@ -48,4 +48,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MobileHeader;

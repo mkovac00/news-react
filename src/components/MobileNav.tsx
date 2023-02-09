@@ -1,16 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import "./MobileNav.scss";
+import { NavLink } from "react-router-dom";
 
 import Category from "./Category";
 import { categories } from "../categories";
 
-const toggleMobileMenu = () => {
-  const mobileMenu = document.querySelector(".wrapper");
-  mobileMenu?.classList.toggle("menu-active");
-};
-
-const MobileNav = () => {
+const Navigation = () => {
   let activeStyle = {
     backgroundColor: "white",
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
@@ -27,8 +22,17 @@ const MobileNav = () => {
     }
   };
 
+  const toggleMobileMenu = () => {
+    const mobileMenu = document.querySelector(".wrapper");
+    mobileMenu?.classList.toggle("menu-active");
+  };
+
   return (
-    <>
+    <header>
+      <h1 className="header-title">
+        <span className="header-title-red">My</span>News
+      </h1>
+
       <div onClick={toggleMobileMenu} className="menu-btn">
         <div className="menuicon-bar1"></div>
         <div className="menuicon-bar2"></div>
@@ -53,6 +57,7 @@ const MobileNav = () => {
           <div className="category-list">
             {categories.map((category) => (
               <NavLink
+                key={category.id}
                 to={`/category/${category.name}`}
                 onClick={toggleMobileMenu}
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -70,8 +75,8 @@ const MobileNav = () => {
           </div>
         </div>
       </div>
-    </>
+    </header>
   );
 };
 
-export default MobileNav;
+export default Navigation;

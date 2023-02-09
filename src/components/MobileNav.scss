@@ -1,69 +1,82 @@
 @import "../variables.scss";
 
-.menu-btn {
-  padding: 16px 5vw 16px 5vw;
-  .menuicon-bar1,
-  .menuicon-bar2,
-  .menuicon-bar3 {
-    width: 30px;
-    height: 4px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-}
-
-.wrapper {
-  display: none;
-  z-index: 5;
-}
-
-.menu-active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+header {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  .menu-btn {
-    width: 100%;
-    padding-left: 87vw;
-    padding-top: 16px;
-  }
-  .mobilenav-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .mobilenav-title {
-      margin: 50px auto;
-      .mobilenav-title-red {
-        color: $important-text-color;
-      }
+  justify-content: space-between;
+  align-items: center;
+
+  .header-title {
+    padding: 16px 5vw 16px 5vw;
+    .header-title-red {
+      color: $important-text-color;
     }
-    .category-list {
-      margin: 30px auto;
+  }
+
+  .menu-btn {
+    padding: 16px 5vw 16px 5vw;
+    .menuicon-bar1,
+    .menuicon-bar2,
+    .menuicon-bar3 {
+      width: 30px;
+      height: 4px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  }
+
+  .wrapper {
+    display: none;
+    z-index: 5;
+  }
+
+  .menu-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    .menu-btn {
+      width: 100%;
+      padding-left: 87vw;
+      padding-top: 16px;
+    }
+    .mobilenav-content {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      a {
+      .mobilenav-title {
+        margin: 50px auto;
+        .mobilenav-title-red {
+          color: $important-text-color;
+        }
+      }
+      .category-list {
+        margin: 30px auto;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 110px;
-        height: 110px;
-        border-radius: 10px;
-        margin: 8px;
-        text-decoration: none;
-        color: $dark-gray-color;
-        font-weight: bold;
+        flex-wrap: wrap;
+        gap: 15px;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 110px;
+          height: 110px;
+          border-radius: 10px;
+          margin: 8px;
+          text-decoration: none;
+          color: $dark-gray-color;
+          font-weight: bold;
+        }
       }
     }
   }

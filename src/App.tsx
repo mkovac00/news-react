@@ -8,7 +8,7 @@ import {
 import Media from "react-media";
 import "./App.scss";
 
-import Header from "./components/Header";
+import Header from "./components/MobileHeader";
 import LatestList from "./components/LatestList";
 import FeaturedList from "./components/FeaturedList";
 import CategoryList from "./components/CategoryList";
