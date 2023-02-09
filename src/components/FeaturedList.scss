@@ -1,0 +1,12 @@
+@import "../variables.scss";
+
+.featured-title {
+  padding-left: 5vw;
+  padding-top: 45px;
+  display: none;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    padding-left: 24px;
+    display: inline-block;
+  }
+}

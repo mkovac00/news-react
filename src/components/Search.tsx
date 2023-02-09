@@ -6,18 +6,16 @@ import axios from "axios";
 import CardList from "./CardList";
 import Loading from "./Loading";
 
-type SearchProps = {
-  isActive: boolean;
-};
-
 const Search = () => {
   const [searchedArticles, setSearchedArticles] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState<any | null>(null);
 
   useEffect(() => {
     setIsLoading(true);
+    setSearchQuery(localStorage.getItem("searchQuery"));
+
     const getArticles = async () => {
       try {
         const response = await axios.get(
@@ -36,22 +34,9 @@ const Search = () => {
     setIsLoading(false);
   }, [searchQuery]);
 
-  const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      const target = event.target as HTMLInputElement;
-
-      setSearchQuery(target.value);
-      target.value = "";
-    }
-  };
-
   return (
     <>
-      <input
-        type="text"
-        onKeyDown={updateSearchQuery}
-        placeholder="Search news"
-      ></input>
+      <h2 className="search-title">Searched articles</h2>
       {isLoading && <Loading />}
       {!isLoading && searchedArticles.length > 0 && (
         <CardList articles={searchedArticles} />

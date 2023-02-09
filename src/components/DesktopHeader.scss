@@ -1,13 +1,13 @@
 @import "../variables.scss";
 
-.desktop-header {
+.desktop-header-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 16px;
-  padding-top: 32px;
+  padding-top: 115px;
+
   .desktop-header-title {
-    margin: 50px auto;
     font-size: 2.5rem;
     .desktop-header-title-red {
       color: $important-text-color;

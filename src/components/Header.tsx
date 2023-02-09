@@ -10,12 +10,25 @@ const Header = () => {
     color: "#BB1E1E",
   };
 
+  const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      const target = event.target as HTMLInputElement;
+      localStorage.setItem("searchQuery", target.value);
+
+      window.location.href = "/search";
+      target.value = "";
+    }
+  };
+
   return (
     <div className="header">
       <Navigation />
-      <NavLink to="/search">
-        <button className="search-button">Search</button>
-      </NavLink>
+      <input
+        className="search-button"
+        placeholder="Search"
+        type="text"
+        onKeyDown={updateSearchQuery}
+      ></input>
 
       <div className="news-option-container">
         <NavLink

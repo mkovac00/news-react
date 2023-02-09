@@ -17,7 +17,7 @@ const CategoryList = () => {
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${categoryName}&pageSize=10&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=${categoryName}&pageSize=12&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
         );
 
         setArticles(response.data.articles);

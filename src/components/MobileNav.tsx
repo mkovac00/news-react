@@ -17,6 +17,16 @@ const MobileNav = () => {
     color: "#BB1E1E",
   };
 
+  const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      const target = event.target as HTMLInputElement;
+      localStorage.setItem("searchQuery", target.value);
+
+      window.location.href = "/search";
+      target.value = "";
+    }
+  };
+
   return (
     <>
       <div onClick={toggleMobileMenu} className="menu-btn">
@@ -34,9 +44,12 @@ const MobileNav = () => {
           <h1 className="mobilenav-title">
             <span className="mobilenav-title-red">My</span>News
           </h1>
-          <NavLink to="/search" onClick={toggleMobileMenu}>
-            <button className="search-button">Search</button>
-          </NavLink>
+          <input
+            className="search-button"
+            placeholder="Search"
+            type="text"
+            onKeyDown={updateSearchQuery}
+          ></input>
           <div className="category-list">
             {categories.map((category) => (
               <NavLink

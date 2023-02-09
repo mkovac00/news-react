@@ -1,12 +1,29 @@
 @import "../variables.scss";
 
-input {
-  width: 90vw;
-  height: 50px;
-  border: none;
-  border-radius: 10px;
-  background-color: $secondary-background-color;
-  margin: 16px 5vw;
-  font-size: 16px;
-  padding: 16px;
+// input {
+//   width: 90vw;
+//   height: 50px;
+//   border: none;
+//   border-radius: 10px;
+//   background-color: $secondary-background-color;
+//   margin: 16px 5vw;
+//   font-size: 16px;
+//   padding: 16px;
+
+//   @media only screen and (min-width: $breakpoint-mobile) {
+//     width: 700px;
+//   }
+// }
+
+.search-title {
+  padding-left: 5vw;
+  padding-top: 5vh;
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    padding-left: 24px;
+  }
+
+  .search-title-red {
+    color: $important-text-color;
+  }
 }

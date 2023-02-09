@@ -14,7 +14,7 @@ const CardList = (props: CardListProps) => {
   // Using slice below to limit the featured results to only ten articles
   return (
     <ul className="card-list">
-      {props.articles.slice(0, 10).map((article) => (
+      {props.articles.slice(0, 12).map((article) => (
         <Card
           key={uuidv4()}
           category={article.section || article.section_name}
