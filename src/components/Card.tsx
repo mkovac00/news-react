@@ -21,6 +21,7 @@ const Card = (props: CardProps) => {
       let article = {
         category: props.category,
         title: props.title,
+        urlToImage: props.image,
       };
 
       favoriteArticles.push(article);
