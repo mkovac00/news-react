@@ -30,10 +30,10 @@ const LatestList = () => {
     };
 
     getArticles();
+    incremenetPage();
   }, []);
 
   const fetchMoreData = () => {
-    incremenetPage();
     if (articles.length >= totalResults / 10) {
       setHasMore(false);
       return;
@@ -51,6 +51,7 @@ const LatestList = () => {
     };
 
     getArticles();
+    incremenetPage();
   };
 
   const incremenetPage = () => {
