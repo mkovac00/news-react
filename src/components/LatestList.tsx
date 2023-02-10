@@ -61,10 +61,10 @@ const LatestList = () => {
   };
 
   return (
-    <div className="latest-container">
-      <div className="latest-container-upper">
+    <div className="latest-list__container">
+      <div className="latest-list__header">
         <div className="live-circle"></div>
-        <h3 className="latest-container-title">Latest news</h3>
+        <h3 className="latest-list__title">Latest news</h3>
       </div>
       <InfiniteScroll
         dataLength={currentPage * 10}

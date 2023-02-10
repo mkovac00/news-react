@@ -55,13 +55,13 @@ const Card = (props: CardProps) => {
 
   return (
     <div className="card">
-      <img className="card-img" src={props.image} alt="article-image" />
+      <img className="card-img" src={props.image} alt="Article image" />
       <div className="card-info">
         {isFavorite && (
-          <AiFillStar className="favorites" onClick={addToFavorites} />
+          <AiFillStar className="favorites-icon" onClick={addToFavorites} />
         )}
         {!isFavorite && (
-          <AiOutlineStar className="favorites" onClick={addToFavorites} />
+          <AiOutlineStar className="favorites-icon" onClick={addToFavorites} />
         )}
         <h3 className="card-category">{props.category}</h3>
         <p className="card-title">{props.title}</p>

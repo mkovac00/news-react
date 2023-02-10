@@ -1,11 +1,11 @@
 @import "../variables.scss";
 
-.desktop-news-page {
+.desktop-news__container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  .desktop-news-featured {
+  .desktop-news__featured {
     @media only screen and (min-width: $breakpoint-desktop) {
       max-width: 420px;
     }

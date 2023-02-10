@@ -5,11 +5,11 @@ import LatestList from "./LatestList";
 
 const DesktopNews = () => {
   return (
-    <div className="desktop-news-page">
-      <div className="desktop-news-featured">
+    <div className="desktop-news__container">
+      <div className="desktop-news__featured">
         <FeaturedList />
       </div>
-      <div className="desktop-news-latest">
+      <div className="desktop-news__latest">
         <LatestList />
       </div>
     </div>

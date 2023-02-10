@@ -8,8 +8,8 @@ type LatestProps = {
 const Latest = (props: LatestProps) => {
   return (
     <div className="latest-card">
-      <p className="latest-card-time">{props.time}</p>
-      <p className="latest-card-title">{props.title}</p>
+      <p className="latest-card__time">{props.time}</p>
+      <p className="latest-card__title">{props.title}</p>
     </div>
   );
 };

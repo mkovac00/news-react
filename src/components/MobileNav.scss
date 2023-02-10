@@ -11,19 +11,19 @@ header {
   align-items: center;
   z-index: 5;
 
-  .header-title {
+  .mobile-nav__header-title {
     padding: 16px 5vw 16px 5vw;
-    .header-title-red {
+    .mobile-nav__header-title-important {
       color: $important-text-color;
     }
   }
 
-  .menu-btn {
+  .mobile-menu__btn {
     padding: 16px 5vw 16px 5vw;
     z-index: 5;
-    .menuicon-bar1,
-    .menuicon-bar2,
-    .menuicon-bar3 {
+    .menu-icon__top-bar,
+    .menu-icon__middle-bar,
+    .menu-icon__bottom-bar {
       width: 30px;
       height: 4px;
       background-color: #333;
@@ -32,13 +32,13 @@ header {
     }
   }
 
-  .wrapper {
+  .mobile-menu__container {
     display: none;
     z-index: 3;
     animation: 0.5s slide;
   }
 
-  .menu-active {
+  .mobile-menu__active {
     position: fixed;
     top: 0;
     left: 0;
@@ -49,25 +49,25 @@ header {
     justify-content: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
-    .menu-btn {
+    .mobile-menu__btn {
       width: 100%;
       padding-left: 87vw;
       padding-top: 16px;
     }
-    .mobilenav-content {
+    .mobile-menu__content {
       animation: 1s appear;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-top: 80px;
-      .mobilenav-title {
+      .mobile-menu__title {
         margin: 50px auto;
-        .mobilenav-title-red {
+        .mobile-menu__title-important {
           color: $important-text-color;
         }
       }
-      .search-input-nav {
+      .mobile-menu__search-input {
         width: 90vw;
         height: 50px;
         border: none;
@@ -83,7 +83,7 @@ header {
           width: 700px;
         }
       }
-      .category-list {
+      .mobile-menu__category-list {
         margin: 30px auto;
         display: flex;
         flex-direction: row;

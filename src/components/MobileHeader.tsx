@@ -23,16 +23,16 @@ const MobileHeader = () => {
   };
 
   return (
-    <div className="mobile-header">
+    <div className="mobile-header__container">
       <MobileNav />
       <input
-        className="search-input"
+        className="mobile-header__search-input"
         placeholder="Search"
         type="text"
         onKeyDown={updateSearchQuery}
       ></input>
 
-      <div className="news-option-container">
+      <div className="mobile-header__news-option">
         <NavLink
           to="/category/home"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}

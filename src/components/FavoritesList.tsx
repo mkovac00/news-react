@@ -9,9 +9,9 @@ const FavoritesList = () => {
 
   return (
     <>
-      <h2 className="favorites-title">
+      <h2 className="favorites-list__section-title">
         Your
-        <span className="favorites-title-red"> saved </span> articles
+        <span className="favorites-list__section-name"> saved </span> articles
       </h2>
       <CardList articles={favoriteArticles} />
     </>

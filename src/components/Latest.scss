@@ -15,17 +15,17 @@
     width: 100%;
   }
 
-  .latest-card-time,
-  .latest-card-title {
+  .latest-card__time,
+  .latest-card__title {
     background-color: inherit;
   }
-  .latest-card-time {
+  .latest-card__time {
     color: $secondary-text-color;
     padding-bottom: 4px;
     font-size: 13px;
     font-weight: bold;
   }
-  .latest-card-title {
+  .latest-card__title {
     font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;

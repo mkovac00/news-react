@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.latest-container {
+.latest-list__container {
   width: 90vw;
   height: 60vh;
   background-color: $secondary-background-color;
@@ -12,7 +12,7 @@
     margin: 90px 0;
   }
 
-  .latest-container-upper {
+  .latest-list__header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -47,7 +47,7 @@
         border-radius: 50%;
       }
     }
-    .latest-container-title {
+    .latest-list__title {
       background-color: inherit;
       border-radius: inherit;
       padding-left: 8px;

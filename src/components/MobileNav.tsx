@@ -26,12 +26,12 @@ const MobileNav = () => {
   };
 
   const toggleMobileMenu = () => {
-    const mobileMenu = document.querySelector(".wrapper");
-    const mobileMenuIcon1 = document.querySelector(".menuicon-bar1");
-    const mobileMenuIcon2 = document.querySelector(".menuicon-bar2");
-    const mobileMenuIcon3 = document.querySelector(".menuicon-bar3");
+    const mobileMenu = document.querySelector(".mobile-menu__container");
+    const mobileMenuIcon1 = document.querySelector(".menu-icon__top-bar");
+    const mobileMenuIcon2 = document.querySelector(".menu-icon__middle-bar");
+    const mobileMenuIcon3 = document.querySelector(".menu-icon__bottom-bar");
 
-    mobileMenu?.classList.toggle("menu-active");
+    mobileMenu?.classList.toggle("mobile-menu__active");
     mobileMenuIcon1?.classList.toggle("change-top");
     mobileMenuIcon2?.classList.toggle("change-middle");
     mobileMenuIcon3?.classList.toggle("change-bottom");
@@ -39,26 +39,26 @@ const MobileNav = () => {
 
   return (
     <header>
-      <h1 className="header-title">
-        <span className="header-title-red">My</span>News
+      <h1 className="mobile-nav__header-title">
+        <span className="mobile-nav__header-title-important">My</span>News
       </h1>
-      <div onClick={toggleMobileMenu} className="menu-btn">
-        <div className="menuicon-bar1"></div>
-        <div className="menuicon-bar2"></div>
-        <div className="menuicon-bar3"></div>
+      <div onClick={toggleMobileMenu} className="mobile-menu__btn">
+        <div className="menu-icon__top-bar"></div>
+        <div className="menu-icon__middle-bar"></div>
+        <div className="menu-icon__bottom-bar"></div>
       </div>
-      <div className="wrapper">
-        <div className="mobilenav-content">
-          <h1 className="mobilenav-title">
-            <span className="mobilenav-title-red">My</span>News
+      <div className="mobile-menu__container">
+        <div className="mobile-menu__content">
+          <h1 className="mobile-menu__title">
+            <span className="mobile-menu__title-important">My</span>News
           </h1>
           <input
-            className="search-input-nav"
+            className="mobile-menu__search-input"
             placeholder="Search"
             type="text"
             onKeyDown={updateSearchQuery}
           ></input>
-          <div className="category-list">
+          <div className="mobile-menu__category-list">
             {categories.map((category) => (
               <NavLink
                 key={category.id}

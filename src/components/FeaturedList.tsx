@@ -30,7 +30,7 @@ const FeaturedList = () => {
 
   return (
     <>
-      <h2 className="featured-title">News</h2>
+      <h2 className="featured-list__title">News</h2>
       {isLoading && <Loading />}
       {!isLoading && <CardList articles={articles} />}
     </>

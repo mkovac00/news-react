@@ -36,7 +36,7 @@ const Search = () => {
 
   return (
     <>
-      <h2 className="search-title">Searched articles</h2>
+      <h2 className="search__section-title">Searched articles</h2>
       {isLoading && <Loading />}
       {!isLoading && searchedArticles.length > 0 && (
         <CardList articles={searchedArticles} />

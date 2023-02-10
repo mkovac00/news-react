@@ -1,14 +1,10 @@
 @import "../variables.scss";
 
-.search-title {
+.search__section-title {
   padding-left: 5vw;
   padding-top: 5vh;
 
   @media only screen and (min-width: $breakpoint-desktop) {
     padding-left: 24px;
-  }
-
-  .search-title-red {
-    color: $important-text-color;
   }
 }

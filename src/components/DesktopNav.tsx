@@ -12,7 +12,7 @@ let activeStyle = {
 
 const DesktopNav = () => {
   return (
-    <div className="category-list">
+    <div className="desktop-nav__category-list">
       {categories.map((category) => (
         <NavLink
           to={`/category/${category.name}`}

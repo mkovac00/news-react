@@ -1,6 +1,6 @@
 @import "../variables.scss";
 
-.categories-title {
+.categories-list__section-title {
   padding-left: 5vw;
   padding-top: 5vh;
 
@@ -8,7 +8,7 @@
     padding-left: 24px;
   }
 
-  .categories-title-red {
+  .categories-list__section-name {
     color: $important-text-color;
   }
 }
