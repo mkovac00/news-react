@@ -35,6 +35,7 @@ header {
   .wrapper {
     display: none;
     z-index: 3;
+    animation: 0.5s slide;
   }
 
   .menu-active {
@@ -54,6 +55,7 @@ header {
       padding-top: 16px;
     }
     .mobilenav-content {
+      animation: 1s appear;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -114,4 +116,22 @@ header {
 }
 .change-bottom {
   transform: translate(0, -10px) rotate(45deg);
+}
+
+@keyframes slide {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
