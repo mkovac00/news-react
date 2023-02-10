@@ -1,50 +1,102 @@
 @import "../variables.scss";
 
-.desktop-header-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 16px;
-  padding-top: 115px;
-
-  .desktop-header-title {
-    font-size: 2.5rem;
-    .desktop-header-title-red {
-      color: $important-text-color;
+.desktop-header__container {
+  .desktop-header__fixed-to-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: $important-text-color;
+    color: $light-text-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    z-index: 10;
+    .desktop-header__fixed-bold-text {
+      background-color: inherit;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
-  }
-  .desktop-header-search__submit {
-    position: relative;
-    .desktop-header-search__input {
-      width: 680px;
-      height: 50px;
+    .desktop-header__fixed-text {
+      background-color: inherit;
+      font-size: 0.9rem;
+      padding-left: 40px;
+    }
+    .desktop-header__btn-confirm {
+      width: 80px;
+      height: 45px;
+      background-color: $light-text-color;
+      color: $dark-text-color;
       border: none;
       border-radius: 10px;
-      background-color: $secondary-background-color;
-      margin: 16px 80px;
-      font-size: 16px;
-      padding: 16px;
-      text-align: left;
-      color: rgba(0, 0, 0, 0.6);
-    }
-    .desktop-header-search__button {
-      position: absolute;
-      top: 21px;
-      right: 85px;
-      display: inline-block;
-      width: 100px;
-      height: 40px;
-      background-color: $important-text-color;
-      color: $light-text-color;
-      border: none;
-      border-radius: 8px;
       font-weight: bold;
-      transition: 0.5s all;
+      margin-left: 240px;
+      transition: all 0.4s ease;
       &:hover {
-        border: 1px solid $important-text-color;
-        background-color: $light-text-color;
-        color: $important-text-color;
         cursor: pointer;
+        color: $important-text-color;
+      }
+    }
+    .desktop-header__btn-deny {
+      background-color: inherit;
+      border: none;
+      color: $light-text-color;
+      font-weight: bold;
+      margin-left: 48px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .desktop-header__hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 16px;
+    padding-top: 115px;
+
+    .desktop-header__title {
+      font-size: 2.5rem;
+      .desktop-header__title-important {
+        color: $important-text-color;
+      }
+    }
+    .desktop-header-search__submit {
+      position: relative;
+      .desktop-header-search__input {
+        width: 680px;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: $secondary-background-color;
+        margin: 16px 80px;
+        font-size: 16px;
+        padding: 16px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      .desktop-header-search__button {
+        position: absolute;
+        top: 21px;
+        right: 85px;
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        background-color: $important-text-color;
+        color: $light-text-color;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.5s all;
+        &:hover {
+          border: 1px solid $important-text-color;
+          background-color: $light-text-color;
+          color: $important-text-color;
+          cursor: pointer;
+        }
       }
     }
   }

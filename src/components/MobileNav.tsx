@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Category from "./Category";
 import { categories } from "../categories";
 
-const Navigation = () => {
+const MobileNav = () => {
   let navigate = useNavigate();
 
   let activeStyle = {
@@ -42,7 +42,6 @@ const Navigation = () => {
       <h1 className="header-title">
         <span className="header-title-red">My</span>News
       </h1>
-
       <div onClick={toggleMobileMenu} className="menu-btn">
         <div className="menuicon-bar1"></div>
         <div className="menuicon-bar2"></div>
@@ -84,4 +83,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default MobileNav;

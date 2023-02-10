@@ -8,13 +8,12 @@ import {
 import Media from "react-media";
 import "./App.scss";
 
-import Header from "./components/MobileHeader";
+import MobileHeader from "./components/MobileHeader";
 import LatestList from "./components/LatestList";
 import FeaturedList from "./components/FeaturedList";
 import CategoryList from "./components/CategoryList";
 import FavoritesList from "./components/FavoritesList";
 import Search from "./components/Search";
-import DesktopFixed from "./components/DesktopFixed";
 import DesktopHeader from "./components/DesktopHeader";
 import DesktopNav from "./components/DesktopNav";
 import DesktopNews from "./components/DesktopNews";
@@ -34,7 +33,7 @@ const App: React.FC = () => {
             {(matches.tablet || matches.mobile) && (
               <Router>
                 <div className="App-mobile">
-                  <Header />
+                  <MobileHeader />
                   <Routes>
                     <Route
                       path="/"
@@ -66,7 +65,6 @@ const App: React.FC = () => {
               <Router>
                 <div className="App-desktop">
                   <div className="desktop-header">
-                    <DesktopFixed />
                     <DesktopHeader />
                   </div>
                   <div className="desktop-navigation">
