@@ -19,7 +19,7 @@ const LatestList = () => {
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=world&sortBy=publishedAt&pageSize=10&page=${currentPage}&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
+          `https://newsapi.org/v2/everything?q=world&sortBy=publishedAt&pageSize=10&page=1&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
         );
 
         setArticles(response.data.articles);
@@ -30,7 +30,7 @@ const LatestList = () => {
     };
 
     getArticles();
-    incremenetPage();
+    incremenetPage(1);
   }, []);
 
   const fetchMoreData = () => {
@@ -51,11 +51,13 @@ const LatestList = () => {
     };
 
     getArticles();
-    incremenetPage();
+    incremenetPage(1);
   };
 
-  const incremenetPage = () => {
-    setCurrentPage(currentPage + 1);
+  const incremenetPage = (amount: number) => {
+    setCurrentPage((currPage) => {
+      return currPage + amount;
+    });
   };
 
   return (
