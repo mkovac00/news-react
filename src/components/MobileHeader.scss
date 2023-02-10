@@ -1,13 +1,13 @@
 @import "../variables.scss";
 
-.header {
-  .search-button {
+.mobile-header {
+  .search-input {
     width: 90vw;
     height: 50px;
     border: none;
     border-radius: 10px;
     background-color: $secondary-background-color;
-    margin: 16px 5vw;
+    margin: 115px 5vw 16px 5vw;
     font-size: 16px;
     padding: 16px;
     text-align: left;

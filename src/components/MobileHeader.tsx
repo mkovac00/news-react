@@ -21,10 +21,10 @@ const MobileHeader = () => {
   };
 
   return (
-    <div className="header">
+    <div className="mobile-header">
       <MobileNav />
       <input
-        className="search-button"
+        className="search-input"
         placeholder="Search"
         type="text"
         onKeyDown={updateSearchQuery}

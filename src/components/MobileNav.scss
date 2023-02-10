@@ -1,9 +1,15 @@
 @import "../variables.scss";
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 5;
 
   .header-title {
     padding: 16px 5vw 16px 5vw;
@@ -14,6 +20,7 @@ header {
 
   .menu-btn {
     padding: 16px 5vw 16px 5vw;
+    z-index: 5;
     .menuicon-bar1,
     .menuicon-bar2,
     .menuicon-bar3 {
@@ -27,7 +34,7 @@ header {
 
   .wrapper {
     display: none;
-    z-index: 5;
+    z-index: 3;
   }
 
   .menu-active {
@@ -51,10 +58,27 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-top: 80px;
       .mobilenav-title {
         margin: 50px auto;
         .mobilenav-title-red {
           color: $important-text-color;
+        }
+      }
+      .search-input-nav {
+        width: 90vw;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: $secondary-background-color;
+        margin: 16 5vw;
+        font-size: 16px;
+        padding: 16px;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.6);
+
+        @media only screen and (min-width: $breakpoint-desktop) {
+          width: 700px;
         }
       }
       .category-list {
@@ -69,8 +93,8 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 110px;
-          height: 110px;
+          width: 90px;
+          height: 90px;
           border-radius: 10px;
           margin: 8px;
           text-decoration: none;
@@ -80,4 +104,14 @@ header {
       }
     }
   }
+}
+
+.change-top {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+.change-middle {
+  opacity: 0;
+}
+.change-bottom {
+  transform: translate(0, -10px) rotate(45deg);
 }

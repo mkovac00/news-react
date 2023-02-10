@@ -24,7 +24,14 @@ const Navigation = () => {
 
   const toggleMobileMenu = () => {
     const mobileMenu = document.querySelector(".wrapper");
+    const mobileMenuIcon1 = document.querySelector(".menuicon-bar1");
+    const mobileMenuIcon2 = document.querySelector(".menuicon-bar2");
+    const mobileMenuIcon3 = document.querySelector(".menuicon-bar3");
+
     mobileMenu?.classList.toggle("menu-active");
+    mobileMenuIcon1?.classList.toggle("change-top");
+    mobileMenuIcon2?.classList.toggle("change-middle");
+    mobileMenuIcon3?.classList.toggle("change-bottom");
   };
 
   return (
@@ -39,17 +46,12 @@ const Navigation = () => {
         <div className="menuicon-bar3"></div>
       </div>
       <div className="wrapper">
-        <div onClick={toggleMobileMenu} className="menu-btn">
-          <div className="menuicon-bar1"></div>
-          <div className="menuicon-bar2"></div>
-          <div className="menuicon-bar3"></div>
-        </div>
         <div className="mobilenav-content">
           <h1 className="mobilenav-title">
             <span className="mobilenav-title-red">My</span>News
           </h1>
           <input
-            className="search-button"
+            className="search-input-nav"
             placeholder="Search"
             type="text"
             onKeyDown={updateSearchQuery}
@@ -68,7 +70,7 @@ const Navigation = () => {
                     category.name.charAt(0).toUpperCase() +
                     category.name.slice(1)
                   }
-                  size={40}
+                  size={35}
                 />
               </NavLink>
             ))}
