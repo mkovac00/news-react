@@ -1,10 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./MobileHeader.scss";
 
 import MobileNav from "./MobileNav";
 
 const MobileHeader = () => {
+  let navigate = useNavigate();
+
   let activeStyle = {
     backgroundColor: "rgba(187, 30, 30, 0.15)",
     color: "#BB1E1E",
@@ -15,7 +17,7 @@ const MobileHeader = () => {
       const target = event.target as HTMLInputElement;
       localStorage.setItem("searchQuery", target.value);
 
-      window.location.href = "/search";
+      navigate("/search");
       target.value = "";
     }
   };

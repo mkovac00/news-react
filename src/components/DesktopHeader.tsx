@@ -1,13 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./DesktopHeader.scss";
 
 const DesktopHeader = () => {
+  let navigate = useNavigate();
+
   const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       const target = event.target as HTMLInputElement;
       localStorage.setItem("searchQuery", target.value);
 
-      window.location.href = "/search";
+      navigate("/search");
       target.value = "";
     }
   };
@@ -24,7 +27,7 @@ const DesktopHeader = () => {
       currentQuery.value !== undefined
     ) {
       localStorage.setItem("searchQuery", currentQuery.value);
-      window.location.href = "/search";
+      navigate("/search");
       currentQuery.value = "";
     }
   };

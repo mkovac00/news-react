@@ -1,11 +1,13 @@
 import React from "react";
 import "./MobileNav.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import Category from "./Category";
 import { categories } from "../categories";
 
 const Navigation = () => {
+  let navigate = useNavigate();
+
   let activeStyle = {
     backgroundColor: "white",
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
@@ -17,8 +19,9 @@ const Navigation = () => {
       const target = event.target as HTMLInputElement;
       localStorage.setItem("searchQuery", target.value);
 
-      window.location.href = "/search";
+      navigate("/search");
       target.value = "";
+      toggleMobileMenu();
     }
   };
 
