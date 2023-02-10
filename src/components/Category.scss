@@ -1,9 +1,15 @@
+@import "../variables.scss";
+
 .category-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: inherit;
+  transition: 0.3s all;
+  &:hover {
+    color: $important-text-color;
+  }
   .category-icon {
     background-color: inherit;
     padding-bottom: 5px;
