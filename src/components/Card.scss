@@ -55,9 +55,14 @@
       top: 8px;
       right: 12px;
       background-color: inherit;
+      transition: 0.6s all;
       &:hover {
         cursor: pointer;
+        color: $gold-color;
       }
+    }
+    .favorites-icon__filled {
+      color: $gold-color;
     }
     .card-category {
       color: $secondary-text-color;
