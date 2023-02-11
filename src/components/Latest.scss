@@ -9,7 +9,16 @@
   height: 80px;
   background-color: $secondary-background-color;
   padding: 12px;
-  margin-bottom: 3px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    height: 1px;
+    width: 90%;
+    border-bottom: 1px solid rgba(126, 126, 126, 0.1);
+  }
 
   @media only screen and (min-width: $breakpoint-desktop) {
     width: 100%;
