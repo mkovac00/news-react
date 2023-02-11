@@ -1,7 +1,7 @@
 import "./DesktopNews.scss";
 
-import FeaturedList from "./FeaturedList";
-import LatestList from "./LatestList";
+import FeaturedList from "../shared/FeaturedList";
+import LatestList from "../shared/LatestList";
 
 const DesktopNews = () => {
   return (

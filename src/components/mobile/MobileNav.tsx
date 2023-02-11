@@ -2,8 +2,8 @@ import React from "react";
 import "./MobileNav.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import Category from "./Category";
-import { categories } from "../categories";
+import Category from "../shared/Category";
+import { categories } from "../../assets/categories";
 
 const MobileNav = () => {
   let navigate = useNavigate();

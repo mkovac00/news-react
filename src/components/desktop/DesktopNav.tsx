@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./DesktopNav.scss";
 
-import Category from "./Category";
-import { categories } from "../categories";
+import Category from "../shared/Category";
+import { categories } from "../../assets/categories";
 
 let activeStyle = {
   backgroundColor: "white",
