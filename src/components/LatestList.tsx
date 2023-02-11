@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AiOutlineDoubleRight } from "react-icons/ai";
 import "./LatestList.scss";
 
 import axios from "axios";
@@ -82,6 +83,10 @@ const LatestList = () => {
           />
         ))}
       </InfiniteScroll>
+      <div className="latest-list__footer">
+        <p className="latest-list__footer-text">See all news</p>
+        <AiOutlineDoubleRight className="latest-list__footer-icon" />
+      </div>
     </div>
   );
 };
