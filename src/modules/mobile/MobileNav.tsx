@@ -2,7 +2,7 @@ import React from "react";
 import "./MobileNav.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import Category from "../shared/Category";
+import Category from "../../components/Category";
 import { categories } from "../../assets/categories";
 
 const MobileNav = () => {

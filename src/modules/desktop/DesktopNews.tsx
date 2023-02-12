@@ -1,7 +1,7 @@
 import "./DesktopNews.scss";
 
-import FeaturedList from "../shared/FeaturedList";
-import LatestList from "../shared/LatestList";
+import FeaturedList from "../../features/featured-news/FeaturedList";
+import LatestList from "../../features/latest-news/LatestList";
 import AdsList from "../../features/ads/AdsList";
 
 import { adList } from "../../assets/adList";

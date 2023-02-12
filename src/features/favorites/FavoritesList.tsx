@@ -1,6 +1,6 @@
 import "./FavoritesList.scss";
 
-import CardList from "./CardList";
+import CardList from "../../components/CardList";
 
 const FavoritesList = () => {
   const favoriteArticles = JSON.parse(

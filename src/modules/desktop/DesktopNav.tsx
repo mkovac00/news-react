@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./DesktopNav.scss";
 
-import Category from "../shared/Category";
+import Category from "../../components/Category";
 import { categories } from "../../assets/categories";
 
 let activeStyle = {

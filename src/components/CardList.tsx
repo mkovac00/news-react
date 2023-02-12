@@ -1,9 +1,9 @@
 import "./CardList.scss";
 
 import Card from "./Card";
-import placeholderImage from "../../assets/placeholder-image.jpg";
-import placeholderImage2 from "../../assets/placeholder-image-2.jpg";
-import placeholderImage3 from "../../assets/placeholder-image-3.jpg";
+import placeholderImage from "../assets/images/placeholder-image.jpg";
+import placeholderImage2 from "../assets/images/placeholder-image-2.jpg";
+import placeholderImage3 from "../assets/images/placeholder-image-3.jpg";
 
 const { v4: uuidv4 } = require("uuid");
 

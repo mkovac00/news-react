@@ -51,11 +51,11 @@ const Card = (props: CardProps) => {
         setIsFavorite(true);
       }
     });
-  }, []);
+  }, [props.title]);
 
   return (
     <div className="card">
-      <img className="card-img" src={props.image} alt="Article image" />
+      <img className="card-img" src={props.image} alt="Article" />
       <div className="card-info">
         {isFavorite && (
           <AiFillStar

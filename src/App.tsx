@@ -8,15 +8,15 @@ import {
 import Media from "react-media";
 import "./App.scss";
 
-import MobileHeader from "./components/mobile/MobileHeader";
-import LatestList from "./components/shared/LatestList";
-import FeaturedList from "./components/shared/FeaturedList";
-import CategoryList from "./components/shared/CategoryList";
-import FavoritesList from "./components/shared/FavoritesList";
-import Search from "./components/shared/Search";
-import DesktopHeader from "./components/desktop/DesktopHeader";
-import DesktopNav from "./components/desktop/DesktopNav";
-import DesktopNews from "./components/desktop/DesktopNews";
+import MobileHeader from "./modules/mobile/MobileHeader";
+import LatestList from "./features/latest-news/LatestList";
+import FeaturedList from "./features/featured-news/FeaturedList";
+import CategoryList from "./components/CategoryList";
+import FavoritesList from "./features/favorites/FavoritesList";
+import Search from "./features/search/Search";
+import DesktopHeader from "./modules/desktop/DesktopHeader";
+import DesktopNav from "./modules/desktop/DesktopNav";
+import DesktopNews from "./modules/desktop/DesktopNews";
 
 const App: React.FC = () => {
   return (

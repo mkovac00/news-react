@@ -3,8 +3,8 @@ import "./Search.scss";
 
 import axios from "axios";
 
-import CardList from "./CardList";
-import Loading from "./Loading";
+import CardList from "../../components/CardList";
+import Loading from "../../components/Loading";
 
 const Search = () => {
   const [searchedArticles, setSearchedArticles] = useState<any[]>([]);

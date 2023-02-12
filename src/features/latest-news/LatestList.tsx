@@ -6,7 +6,7 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import Latest from "./Latest";
-import Loading from "./Loading";
+import Loading from "../../components/Loading";
 
 const { v4: uuidv4 } = require("uuid");
 

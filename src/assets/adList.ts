@@ -1,7 +1,7 @@
-import adImageProfico from "../assets/ad-profico.jpg";
-import adImageSpotify from "../assets/ad-spotify.jpg";
-import adImageValorant from "../assets/ad-valorant.jpg";
-import adImageBurgerking from "../assets/ad-burgerking.jpeg";
+import adImageProfico from "./images/ad-profico.jpg";
+import adImageSpotify from "./images/ad-spotify.jpg";
+import adImageValorant from "./images/ad-valorant.jpg";
+import adImageBurgerking from "./images/ad-burgerking.jpeg";
 
 export const adList = [
   {
