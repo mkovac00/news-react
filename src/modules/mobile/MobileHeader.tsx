@@ -4,13 +4,13 @@ import "./MobileHeader.scss";
 
 import MobileNav from "./MobileNav";
 
+const activeStyle = {
+  backgroundColor: "rgba(187, 30, 30, 0.15)",
+  color: "#BB1E1E",
+};
+
 const MobileHeader = () => {
   let navigate = useNavigate();
-
-  let activeStyle = {
-    backgroundColor: "rgba(187, 30, 30, 0.15)",
-    color: "#BB1E1E",
-  };
 
   const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {

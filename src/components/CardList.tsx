@@ -7,10 +7,10 @@ import placeholderImage3 from "../assets/images/placeholder-image-3.jpg";
 
 const { v4: uuidv4 } = require("uuid");
 
-interface CardListProps {
+type CardListProps = {
   articles: Array<any>;
   listLength: number;
-}
+};
 
 const images = [placeholderImage, placeholderImage2, placeholderImage3];
 
@@ -19,7 +19,7 @@ const getRandomPlaceholderImage = (randomIndex: number) => {
 };
 
 const CardList = (props: CardListProps) => {
-  // Using slice below to limit the featured results to only twelve articles
+  // Using slice below to limit the featured results to a desired listLength
   return (
     <ul className="card-list">
       {props.articles.slice(0, props.listLength).map((article) => (

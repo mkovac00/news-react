@@ -1,4 +1,4 @@
-import "./Latest.scss";
+import "./LatestCard.scss";
 
 type LatestProps = {
   time: string;

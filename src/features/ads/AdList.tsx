@@ -1,4 +1,4 @@
-import "./AdsList.scss";
+import "./AdList.scss";
 
 import Ad from "./Ad";
 

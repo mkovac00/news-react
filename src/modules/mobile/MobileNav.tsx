@@ -5,14 +5,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Category from "../../components/Category";
 import { categories } from "../../assets/categories";
 
+const activeStyle = {
+  backgroundColor: "white",
+  boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+  color: "#BB1E1E",
+};
+
 const MobileNav = () => {
   let navigate = useNavigate();
-
-  let activeStyle = {
-    backgroundColor: "white",
-    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-    color: "#BB1E1E",
-  };
 
   const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {

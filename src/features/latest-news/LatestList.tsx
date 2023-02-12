@@ -5,7 +5,7 @@ import "./LatestList.scss";
 import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-import Latest from "./Latest";
+import LatestCard from "./LatestCard";
 import Loading from "../../components/Loading";
 
 const { v4: uuidv4 } = require("uuid");
@@ -76,7 +76,7 @@ const LatestList = () => {
         endMessage={<p>You've reached the end.</p>}
       >
         {articles.map((article) => (
-          <Latest
+          <LatestCard
             key={uuidv4()}
             time={article.publishedAt.slice(11, 16)}
             title={article.title}

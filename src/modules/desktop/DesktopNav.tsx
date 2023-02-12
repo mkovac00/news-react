@@ -4,7 +4,7 @@ import "./DesktopNav.scss";
 import Category from "../../components/Category";
 import { categories } from "../../assets/categories";
 
-let activeStyle = {
+const activeStyle = {
   backgroundColor: "white",
   boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   color: "#BB1E1E",
