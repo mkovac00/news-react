@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./Search.scss";
 
 import axios from "axios";
@@ -10,19 +11,18 @@ const Search = () => {
   const [searchedArticles, setSearchedArticles] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-  const [searchQuery, setSearchQuery] = useState<any | null>(null);
+  const { searchInput } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
-    setSearchQuery(localStorage.getItem("searchQuery"));
 
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchQuery}&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchInput}&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
-        if (searchQuery !== "") {
+        if (searchInput !== "") {
           setSearchedArticles(response.data.response.docs);
         }
       } catch (error) {
@@ -32,7 +32,7 @@ const Search = () => {
 
     getArticles();
     setIsLoading(false);
-  }, [searchQuery]);
+  }, [searchInput]);
 
   return (
     <>

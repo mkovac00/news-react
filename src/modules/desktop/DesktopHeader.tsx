@@ -8,9 +8,12 @@ const DesktopHeader = () => {
   const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       const target = event.target as HTMLInputElement;
-      localStorage.setItem("searchQuery", target.value);
 
-      navigate("/search");
+      if (target.value === "") {
+        return;
+      }
+
+      navigate(`/search/${target.value}`);
       target.value = "";
     }
   };
@@ -26,8 +29,7 @@ const DesktopHeader = () => {
       currentQuery.value !== null &&
       currentQuery.value !== undefined
     ) {
-      localStorage.setItem("searchQuery", currentQuery.value);
-      navigate("/search");
+      navigate(`/search/${currentQuery.value}`);
       currentQuery.value = "";
     }
   };

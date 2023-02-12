@@ -17,9 +17,12 @@ const MobileNav = () => {
   const updateSearchQuery = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       const target = event.target as HTMLInputElement;
-      localStorage.setItem("searchQuery", target.value);
 
-      navigate("/search");
+      if (target.value === "") {
+        return;
+      }
+
+      navigate(`/search/${target.value}`);
       target.value = "";
       toggleMobileMenu();
     }

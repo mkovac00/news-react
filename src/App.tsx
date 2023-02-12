@@ -23,7 +23,7 @@ const App: React.FC = () => {
     <>
       <Media
         queries={{
-          small: "(max-width: 480px)",
+          small: "(max-width: 1023px)",
           medium: "(min-width: 1024px) and (max-width: 1449px)",
           large: "(min-width: 1450px)",
         }}
@@ -40,7 +40,10 @@ const App: React.FC = () => {
                       element={<Navigate to="/category/home" />}
                     ></Route>
                     <Route path="/latest" element={<LatestList />}></Route>
-                    <Route path="/search" element={<Search />}></Route>
+                    <Route
+                      path="/search/:searchInput"
+                      element={<Search />}
+                    ></Route>
                     <Route
                       path="/favorites"
                       element={<Navigate to="/category/favorites" />}
@@ -77,7 +80,10 @@ const App: React.FC = () => {
                         element={<Navigate to="/category/home" />}
                       ></Route>
                       <Route path="/latest" element={<LatestList />}></Route>
-                      <Route path="/search" element={<Search />}></Route>
+                      <Route
+                        path="/search/:searchInput"
+                        element={<Search />}
+                      ></Route>
                       <Route
                         path="/favorites"
                         element={<Navigate to="/category/favorites" />}
@@ -115,7 +121,10 @@ const App: React.FC = () => {
                         element={<Navigate to="/category/home" />}
                       ></Route>
                       <Route path="/latest" element={<LatestList />}></Route>
-                      <Route path="/search" element={<Search />}></Route>
+                      <Route
+                        path="/search/:searchInput"
+                        element={<Search />}
+                      ></Route>
                       <Route
                         path="/favorites"
                         element={<Navigate to="/category/favorites" />}
