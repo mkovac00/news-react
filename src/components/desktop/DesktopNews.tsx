@@ -2,6 +2,9 @@ import "./DesktopNews.scss";
 
 import FeaturedList from "../shared/FeaturedList";
 import LatestList from "../shared/LatestList";
+import AdsList from "../../features/ads/AdsList";
+
+import { adList } from "../../assets/adList";
 
 const DesktopNews = () => {
   return (
@@ -11,6 +14,7 @@ const DesktopNews = () => {
       </div>
       <div className="desktop-news__latest">
         <LatestList />
+        <AdsList ads={adList} listLength={adList.length} />
       </div>
     </div>
   );

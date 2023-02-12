@@ -13,7 +13,10 @@ const FavoritesList = () => {
         Your
         <span className="favorites-list__section-name"> saved </span> articles
       </h2>
-      <CardList articles={favoriteArticles} />
+      <CardList
+        articles={favoriteArticles}
+        listLength={favoriteArticles.length}
+      />
     </>
   );
 };

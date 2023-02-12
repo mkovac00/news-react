@@ -71,7 +71,7 @@ const LatestList = () => {
         dataLength={currentPage * 10}
         next={fetchMoreData}
         hasMore={hasMore}
-        height={500}
+        height={535}
         loader={<Loading />}
         endMessage={<p>You've reached the end.</p>}
       >

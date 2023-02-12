@@ -1,0 +1,10 @@
+@import "../../assets/variables.scss";
+
+.ads-list__container {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

@@ -39,7 +39,7 @@ const Search = () => {
       <h2 className="search__section-title">Searched articles</h2>
       {isLoading && <Loading />}
       {!isLoading && searchedArticles.length > 0 && (
-        <CardList articles={searchedArticles} />
+        <CardList articles={searchedArticles} listLength={12} />
       )}
       {!isLoading && searchedArticles.length < 0 && <div>{errorMessage}</div>}
     </>

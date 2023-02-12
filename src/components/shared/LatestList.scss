@@ -9,7 +9,8 @@
 
   @media only screen and (min-width: $breakpoint-desktop) {
     width: 360px;
-    margin: 90px 0;
+    height: 560px;
+    margin: 89px 0;
   }
 
   .latest-list__header {
@@ -18,8 +19,6 @@
     align-items: center;
     background-color: inherit;
     padding: 16px 0 8px 12px;
-    // padding-top: 16px;
-    // padding-left: 12px;
     border-radius: inherit;
     .live-circle {
       width: 25px;
@@ -81,7 +80,7 @@
   }
 
   .scrollable-div {
-    height: 500px;
+    height: 535px;
     overflow: auto;
   }
 }

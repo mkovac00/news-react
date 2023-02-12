@@ -40,7 +40,7 @@ const CategoryList = () => {
         news
       </h2>
       {isLoading && <Loading />}
-      {!isLoading && <CardList articles={articles} />}
+      {!isLoading && <CardList articles={articles} listLength={12} />}
     </>
   );
 };

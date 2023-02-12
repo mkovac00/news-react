@@ -32,7 +32,7 @@ const FeaturedList = () => {
     <>
       <h2 className="featured-list__title">News</h2>
       {isLoading && <Loading />}
-      {!isLoading && <CardList articles={articles} />}
+      {!isLoading && <CardList articles={articles} listLength={12} />}
     </>
   );
 };
