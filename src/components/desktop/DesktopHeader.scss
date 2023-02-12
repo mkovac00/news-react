@@ -77,6 +77,9 @@
         padding: 16px;
         text-align: left;
         color: rgba(0, 0, 0, 0.6);
+        &:focus {
+          outline: none;
+        }
       }
       .desktop-header-search__button {
         position: absolute;

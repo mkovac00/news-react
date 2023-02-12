@@ -12,6 +12,9 @@
     padding: 16px;
     text-align: left;
     color: rgba(0, 0, 0, 0.6);
+    &:focus {
+      outline: none;
+    }
 
     @media only screen and (min-width: $breakpoint-desktop) {
       width: 700px;
