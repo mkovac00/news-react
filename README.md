@@ -29,17 +29,24 @@ Instructions:
 # Approach
 
 I structured the application in 3 different directories.
+
 Components directory for components shared throughout the whole application.
 Features directory for different features of the web application.
 Modules directory with a collection of related components that provide some kind of a service when combined together.
+
 The assets directory contains necessary assets such as images or any additional application data.
+
 The design of the application is kept very simple yet modern using simple bright colors and smooth animations for navigating through the application itself.
 
 # Design decisions
 
-For most of the project I was following a design, but I was left to implement the **Favorite articles** module by myself for which I chose a really simple yet effective method. I added a button (star shaped) on every article that you are allowed to add to favorites and simply clicking the button adds the article to your favorites list (which can be browsed).
+For most of the project I was following a design, but I was left to implement the **Favorite articles** module by myself for which I chose a really simple yet effective method.
+
+I added a button (star shaped) on every article that you are allowed to add to favorites and simply clicking the button adds the article to your favorites list (which can be browsed).
+
 All articles saved to favorites have the star shaped button colored gold to indicate that they are already saved to favorites.
 To remove the article from your favorites list, simply click on the star shaped button again and the article will be removed.
+
 For the purpose of this application, all articles that are added to favorites are saved inside the browsers _local storage_.
 
 # Status
