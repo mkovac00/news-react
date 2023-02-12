@@ -12,3 +12,13 @@
     color: $important-text-color;
   }
 }
+.favorites-list__is-empty-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 150px;
+  font-size: 20px;
+}

@@ -13,10 +13,18 @@ const FavoritesList = () => {
         Your
         <span className="favorites-list__section-name"> saved </span> articles
       </h2>
-      <CardList
-        articles={favoriteArticles}
-        listLength={favoriteArticles.length}
-      />
+      {favoriteArticles.length <= 0 && (
+        <div className="favorites-list__is-empty-text">
+          <p>You don't have any saved articles yet!</p>
+          <p>Click on a little star inside an article to save it.</p>
+        </div>
+      )}
+      {favoriteArticles.length !== 0 && (
+        <CardList
+          articles={favoriteArticles}
+          listLength={favoriteArticles.length}
+        />
+      )}
     </>
   );
 };
