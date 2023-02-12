@@ -28,4 +28,40 @@ export const adList = [
       "Craving Burger king? Want to go vegan? This new fully plant based burger is for YOU!",
     image: adImageBurgerking,
   },
+  {
+    category: "Advertisement",
+    title:
+      "Are you a interested in developing iOS applications? If the answer is yes, then Profico is for you!",
+    image: adImageProfico,
+  },
+  {
+    category: "Advertisement",
+    title:
+      "Whether you are an early bird or a night owl, Spotify has music for everyone! Join today for only 5.99$",
+    image: adImageSpotify,
+  },
+  {
+    category: "Advertisement",
+    title:
+      "Download Valorant today and get a chance to win a paid trip to Valorant World Championship in London!",
+    image: adImageValorant,
+  },
+  {
+    category: "Advertisement",
+    title:
+      "Are you an animal rights activist? Then this vegan burger is the perfect choice for you!",
+    image: adImageBurgerking,
+  },
+  {
+    category: "Advertisement",
+    title:
+      "Download Valorant today and play against millions of other players worldwide for free!",
+    image: adImageValorant,
+  },
+  {
+    category: "Advertisement",
+    title:
+      "Tell the world about your music taste! New shared spotify playlists available from February 10th!",
+    image: adImageSpotify,
+  },
 ];

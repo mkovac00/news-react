@@ -23,14 +23,14 @@ const App: React.FC = () => {
     <>
       <Media
         queries={{
-          mobile: "(max-width: 480px)",
-          tablet: "(max-width: 1024px)",
-          desktop: "(min-width: 1025px)",
+          small: "(max-width: 480px)",
+          medium: "(min-width: 1024px) and (max-width: 1449px)",
+          large: "(min-width: 1450px)",
         }}
       >
         {(matches) => (
           <>
-            {(matches.tablet || matches.mobile) && (
+            {matches.small && (
               <Router>
                 <div className="App-mobile">
                   <MobileHeader />
@@ -61,7 +61,45 @@ const App: React.FC = () => {
                 </div>
               </Router>
             )}
-            {matches.desktop && (
+            {matches.medium && (
+              <Router>
+                <div className="App-desktop tablettttt">
+                  <div className="desktop-header">
+                    <DesktopHeader />
+                  </div>
+                  <div className="desktop-navigation">
+                    <DesktopNav />
+                  </div>
+                  <div className="desktop-news">
+                    <Routes>
+                      <Route
+                        path="/"
+                        element={<Navigate to="/category/home" />}
+                      ></Route>
+                      <Route path="/latest" element={<LatestList />}></Route>
+                      <Route path="/search" element={<Search />}></Route>
+                      <Route
+                        path="/favorites"
+                        element={<Navigate to="/category/favorites" />}
+                      ></Route>
+                      <Route
+                        path="/category/home"
+                        element={<DesktopNews isTabletSize={true} />}
+                      ></Route>
+                      <Route
+                        path="/category/favorites"
+                        element={<FavoritesList />}
+                      ></Route>
+                      <Route
+                        path="/category/:categoryName"
+                        element={<CategoryList />}
+                      ></Route>
+                    </Routes>
+                  </div>
+                </div>
+              </Router>
+            )}
+            {matches.large && (
               <Router>
                 <div className="App-desktop">
                   <div className="desktop-header">
@@ -84,7 +122,7 @@ const App: React.FC = () => {
                       ></Route>
                       <Route
                         path="/category/home"
-                        element={<DesktopNews />}
+                        element={<DesktopNews isTabletSize={false} />}
                       ></Route>
                       <Route
                         path="/category/favorites"

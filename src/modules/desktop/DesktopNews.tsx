@@ -6,7 +6,11 @@ import AdList from "../../features/ads/AdList";
 
 import { adList } from "../../assets/adList";
 
-const DesktopNews = () => {
+type DesktopNewsProps = {
+  isTabletSize: boolean;
+};
+
+const DesktopNews = (props: DesktopNewsProps) => {
   return (
     <div className="desktop-news__container">
       <div className="desktop-news__featured">
@@ -14,7 +18,9 @@ const DesktopNews = () => {
       </div>
       <div className="desktop-news__latest">
         <LatestList />
-        <AdList ads={adList} listLength={adList.length} />
+        {props.isTabletSize && <AdList ads={adList} listLength={10} />}
+        {!props.isTabletSize && <AdList ads={adList} listLength={4} />}
+        {/* <AdList ads={adList} listLength={adList.length} /> */}
       </div>
     </div>
   );

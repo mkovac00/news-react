@@ -11,16 +11,20 @@ type AdListProps = {
 
 const AdsList = (props: AdListProps) => {
   return (
-    <div className="ads-list__container">
-      {props.ads.slice(0, props.listLength).map((ad) => (
-        <Ad
-          key={uuidv4()}
-          category={ad.category}
-          title={ad.title}
-          image={ad.image}
-        />
-      ))}
-    </div>
+    <>
+      {console.log(props.listLength)}
+      {console.log(props.ads.slice(0, props.listLength))}
+      <div className="ads-list__container">
+        {props.ads.slice(0, props.listLength).map((ad) => (
+          <Ad
+            key={uuidv4()}
+            category={ad.category}
+            title={ad.title}
+            image={ad.image}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
