@@ -9,6 +9,7 @@ type AdProps = {
 const Ad = (props: AdProps) => {
   return (
     <div className="ad-card__container">
+      <div className="ad-card__flag">AD</div>
       <img className="ad-card__img" src={props.image} alt="Advertisement" />
       <div className="ad-card__info">
         <h3 className="ad-card__category">{props.category}</h3>
