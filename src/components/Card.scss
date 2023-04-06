@@ -65,13 +65,19 @@
       text-transform: uppercase;
       padding-bottom: 8px;
     }
-    .card-title {
-      font-size: 18px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+    .card-title-link {
+      text-decoration: none;
+      color: $dark-text-color;
+      background-color: inherit;
+
+      .card-title {
+        font-size: 17px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 }

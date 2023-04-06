@@ -34,6 +34,12 @@ const CardList = (props: CardListProps) => {
                   Math.floor(Math.random() * images.length)
                 )
           }
+          link={
+            article.web_url ||
+            article.url ||
+            article.linkToArticle ||
+            "https://en.wikipedia.org/wiki/HTTP_404"
+          }
         />
       ))}
     </ul>

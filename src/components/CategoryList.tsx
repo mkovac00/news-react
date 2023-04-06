@@ -20,7 +20,6 @@ const CategoryList = () => {
           `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${categoryName}&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
-        console.log(response);
         setArticles(response.data.response.docs);
       } catch (error) {
         console.log(error);

@@ -32,8 +32,6 @@ const LatestList = () => {
           setArticles((current) => [...current, infiniteScrollArticles[i]]);
         }
         incremenetPage(10);
-        console.log(articles);
-        console.log(currentPage);
       } catch (error) {
         console.log(error);
       }
@@ -46,8 +44,6 @@ const LatestList = () => {
   const fetchMoreData = () => {
     if (articles.length >= totalResults) {
       setHasMore(false);
-      console.log(articles.length);
-      console.log(totalResults);
       return;
     }
     const getArticles = async () => {
@@ -62,8 +58,6 @@ const LatestList = () => {
           setArticles((current) => [...current, infiniteScrollArticles[i]]);
         }
         incremenetPage(10);
-        console.log(articles);
-        console.log(currentPage);
       } catch (error) {
         console.log(error);
       }

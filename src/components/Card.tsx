@@ -7,6 +7,7 @@ type CardProps = {
   category: string;
   title: string;
   image: string;
+  link: string;
 };
 
 const Card = (props: CardProps) => {
@@ -22,6 +23,7 @@ const Card = (props: CardProps) => {
         category: props.category,
         title: props.title,
         urlToImage: props.image,
+        linkToArticle: props.link,
       };
 
       favoriteArticles.push(article);
@@ -70,7 +72,9 @@ const Card = (props: CardProps) => {
           />
         )}
         <h3 className="card-category">{props.category}</h3>
-        <p className="card-title">{props.title}</p>
+        <a href={props.link} target="_blank" className="card-title-link">
+          <p className="card-title">{props.title}</p>
+        </a>
       </div>
     </div>
   );
