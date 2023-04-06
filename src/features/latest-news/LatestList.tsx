@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import "./LatestList.scss";
 
-import axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 import LatestCard from "./LatestCard";
@@ -41,6 +40,7 @@ const LatestList = () => {
     };
 
     getArticles();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchMoreData = () => {
