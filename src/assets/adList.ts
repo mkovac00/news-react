@@ -1,4 +1,4 @@
-import adImageProfico from "./images/ad-profico.jpg";
+import adImageGoogle from "./images/ad-google.png";
 import adImageSpotify from "./images/ad-spotify.jpg";
 import adImageValorant from "./images/ad-valorant.jpg";
 import adImageBurgerking from "./images/ad-burgerking.jpeg";
@@ -7,8 +7,8 @@ export const adList = [
   {
     category: "Advertisement",
     title:
-      "Are you a creative frontend developer? Then Profico is for you! Join the fastest growing IT company today.",
-    image: adImageProfico,
+      "Are you a creative frontend developer? Then Google is for you! Join the fastest growing IT company today.",
+    image: adImageGoogle,
   },
   {
     category: "Advertisement",
@@ -31,8 +31,8 @@ export const adList = [
   {
     category: "Advertisement",
     title:
-      "Are you a interested in developing iOS applications? If the answer is yes, then Profico is for you!",
-    image: adImageProfico,
+      "Are you a interested in developing iOS applications? If the answer is yes, then Google is for you!",
+    image: adImageGoogle,
   },
   {
     category: "Advertisement",
