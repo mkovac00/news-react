@@ -29,7 +29,7 @@ const CardList = (props: CardListProps) => {
           title={article.title || article.abstract}
           image={
             article.urlToImage !== null && article.urlToImage !== undefined
-              ? article.urlToImage
+              ? article.urlToImage || article.multimedia[0].url
               : getRandomPlaceholderImage(
                   Math.floor(Math.random() * images.length)
                 )

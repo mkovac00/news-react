@@ -17,10 +17,11 @@ const CategoryList = () => {
     const getArticles = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${categoryName}&pageSize=12&apiKey=${process.env.REACT_APP_NEWSAPI_API_KEY}`
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${categoryName}&api-key=${process.env.REACT_APP_NYTIMES_API_KEY}`
         );
 
-        setArticles(response.data.articles);
+        console.log(response);
+        setArticles(response.data.response.docs);
       } catch (error) {
         console.log(error);
       }

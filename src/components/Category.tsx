@@ -1,7 +1,7 @@
 import "./Category.scss";
 
 import { AiFillHome, AiFillStar } from "react-icons/ai";
-import { GiDramaMasks } from "react-icons/gi";
+import { FaTshirt } from "react-icons/fa";
 import { BsBriefcaseFill } from "react-icons/bs";
 import {
   MdScience,
@@ -21,10 +21,8 @@ const Category = (props: CategoryProps) => {
     case "Home":
       categoryIcon = <AiFillHome size={props.size} className="category-icon" />;
       break;
-    case "Entertainment":
-      categoryIcon = (
-        <GiDramaMasks size={props.size} className="category-icon" />
-      );
+    case "Fashion":
+      categoryIcon = <FaTshirt size={props.size} className="category-icon" />;
       break;
     case "Business":
       categoryIcon = (
