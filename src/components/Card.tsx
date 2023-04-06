@@ -72,7 +72,12 @@ const Card = (props: CardProps) => {
           />
         )}
         <h3 className="card-category">{props.category}</h3>
-        <a href={props.link} target="_blank" className="card-title-link">
+        <a
+          href={props.link}
+          target="_blank"
+          rel="noreferrer"
+          className="card-title-link"
+        >
           <p className="card-title">{props.title}</p>
         </a>
       </div>
