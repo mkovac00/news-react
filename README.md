@@ -47,7 +47,7 @@ To get the starting application template I used Create React App.
 
 # How to check out the project
 
-You can visit the project at: "LINK"
+You can visit the project at: [MyNews](https://admirable-sprite-8863df.netlify.app)
 
 # Status
 
